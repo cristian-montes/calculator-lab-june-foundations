@@ -17,3 +17,18 @@ test('test adding', (expect) => {
     // Make assertions about what is expected versus the actual result
     expect.equal(actual, expected);
 });
+
+// name your test by what it is testing
+test('test subtracting', (expect) => {
+    //Arrange
+    // Set up your arguments and expectations
+    const expected = 1;
+    
+    //Act 
+    // Call the function you're testing and set the result to a const
+    const actual = subtract(5, 4); // use your function here
+
+    //Expect
+    // Make assertions about what is expected versus the actual result
+    expect.equal(actual, expected);
+});
