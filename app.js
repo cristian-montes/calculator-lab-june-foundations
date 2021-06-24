@@ -1,6 +1,7 @@
 // import functions
 // import our add function
 import { add } from './calculations.js';
+import { subtract } from './calculations.js';
 
 // reference needed DOM elements
 // #first-add-input, #second-add-input, #add-button, #sum-display
@@ -44,9 +45,9 @@ console.log(differenceDisplay);
 subtractButton.addEventListener('click', ()=>{
     console.log(firstSubtractInput.value);
 
-//     const subtrahend1 = Number(firstSubtractInput.value);
-//     const subtrahend2 = Number(secondSubtractInput.value);
-//     const answer = subtract(subtrahend1, subtrahend2);
-//     console.log(answer);
-//     differenceDisplay.textContent = answer;
+    const subtrahend1 = Number(firstSubtractInput.value);
+    const subtrahend2 = Number(secondSubtractInput.value);
+    const answer = subtract(subtrahend1, subtrahend2);
+    console.log(answer);
+    differenceDisplay.textContent = answer;
 });
