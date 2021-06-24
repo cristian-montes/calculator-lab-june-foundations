@@ -20,7 +20,7 @@ console.log(sumDisplay);
   // update DOM to reflect new value(s)
 
   // add event listener to button click
-addButton.addEventListener('click', ()=>{
+addButton.addEventListener('click', () => {
     console.log(firstAddInput.value);
 // get the value #first-add-input -- convert to number
     const addend1 = Number(firstAddInput.value);
@@ -42,7 +42,7 @@ console.log(secondSubtractInput);
 console.log(subtractButton);
 console.log(differenceDisplay);
 
-subtractButton.addEventListener('click', ()=>{
+subtractButton.addEventListener('click', () => {
     console.log(firstSubtractInput.value);
 
     const subtrahend1 = Number(firstSubtractInput.value);
@@ -50,4 +50,17 @@ subtractButton.addEventListener('click', ()=>{
     const answer = subtract(subtrahend1, subtrahend2);
     console.log(answer);
     differenceDisplay.textContent = answer;
+});
+
+const firstMultiplyInput = document.getElementById('first-multiply-input');
+const secondMultiplyInput = document.getElementById('second-multiply-input');
+const multiplyButton = document.getElementById('multiply-button');
+const productDisplay = document.getElementById('product-display');
+console.log(firstMultiplyInput);
+console.log(secondMultiplyInput);
+console.log(multiplyButton);
+console.log(productDisplay);
+
+multiplyButton.addEventListener('click', () => {
+    console.log(firstMultiplyInput.value);
 });
