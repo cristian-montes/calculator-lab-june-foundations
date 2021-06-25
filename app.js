@@ -3,6 +3,7 @@
 import { add } from './calculations.js';
 import { subtract } from './calculations.js';
 import { multiply } from './calculations.js';
+import { divide } from './calculations.js';
 
 // reference needed DOM elements
 // #first-add-input, #second-add-input, #add-button, #sum-display
@@ -83,4 +84,10 @@ console.log(quotientDisplay);
 
 divideButton.addEventListener('click', () => {
     console.log(firstDivideInput.value);
+
+    const divisor1 = Number(firstDivideInput.value);
+    const divisor2 = Number(secondDivideInput.value);
+    const answer = divide(divisor1, divisor2);
+    console.log(answer);
+    quotientDisplay.textContent = answer;
 });
