@@ -91,3 +91,16 @@ divideButton.addEventListener('click', () => {
     console.log(answer);
     quotientDisplay.textContent = answer;
 });
+
+const firstModuloInput = document.getElementById('first-modulo-input');
+const secondModuloInput = document.getElementById('second-modulo-input');
+const moduloButton = document.getElementById('modulo-button');
+const remainderDisplay = document.getElementById('remainder-display');
+console.log(firstModuloInput);
+console.log(secondModuloInput);
+console.log(moduloButton);
+console.log(remainderDisplay);
+
+moduloButton.addEventListener('click', () => {
+    console.log(firstModuloInput.value);
+});
