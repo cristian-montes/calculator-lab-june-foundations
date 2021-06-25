@@ -4,6 +4,7 @@ import { add } from './calculations.js';
 import { subtract } from './calculations.js';
 import { multiply } from './calculations.js';
 import { divide } from './calculations.js';
+import { modulo } from './calculations.js';
 
 // reference needed DOM elements
 // #first-add-input, #second-add-input, #add-button, #sum-display
@@ -103,4 +104,10 @@ console.log(remainderDisplay);
 
 moduloButton.addEventListener('click', () => {
     console.log(firstModuloInput.value);
+
+    const operand1 = Number(firstModuloInput.value);
+    const operand2 = Number(secondModuloInput.value);
+    const answer = modulo(operand1, operand2);
+    console.log(answer);
+    remainderDisplay.textContent = answer;
 });
