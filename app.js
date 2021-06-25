@@ -71,3 +71,16 @@ multiplyButton.addEventListener('click', () => {
     console.log(answer);
     productDisplay.textContent = answer;
 });
+
+const firstDivideInput = document.getElementById('first-divide-input');
+const secondDivideInput = document.getElementById('second-divide-input');
+const divideButton = document.getElementById('divide-button');
+const quotientDisplay = document.getElementById('quotient-display');
+console.log(firstDivideInput);
+console.log(secondDivideInput);
+console.log(divideButton);
+console.log(quotientDisplay);
+
+divideButton.addEventListener('click', () => {
+    console.log(firstDivideInput.value);
+});
