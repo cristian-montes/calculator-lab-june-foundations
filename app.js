@@ -2,6 +2,7 @@
 // import our add function
 import { add } from './calculations.js';
 import { subtract } from './calculations.js';
+import { multiply } from './calculations.js';
 
 // reference needed DOM elements
 // #first-add-input, #second-add-input, #add-button, #sum-display
@@ -63,4 +64,10 @@ console.log(productDisplay);
 
 multiplyButton.addEventListener('click', () => {
     console.log(firstMultiplyInput.value);
+
+    const factor1 = Number(firstMultiplyInput.value);
+    const factor2 = Number(secondMultiplyInput.value);
+    const answer = multiply(factor1, factor2);
+    console.log(answer);
+    productDisplay.textContent = answer;
 });
