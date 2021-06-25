@@ -2,6 +2,7 @@
 import { add } from '../calculations.js';
 import { subtract } from '../calculations.js';
 import { multiply } from '../calculations.js';
+import { divide } from '../calculations.js';
 
 const test = QUnit.test;
 
@@ -44,6 +45,21 @@ test('test multiplying', (expect) => {
     //Act 
     // Call the function you're testing and set the result to a const
     const actual = multiply(6, 7); // use your function here
+
+    //Expect
+    // Make assertions about what is expected versus the actual result
+    expect.equal(actual, expected);
+});
+
+// name your test by what it is testing
+test('test dividing', (expect) => {
+    //Arrange
+    // Set up your arguments and expectations
+    const expected = 4;
+    
+    //Act 
+    // Call the function you're testing and set the result to a const
+    const actual = divide(8, 2); // use your function here
 
     //Expect
     // Make assertions about what is expected versus the actual result
