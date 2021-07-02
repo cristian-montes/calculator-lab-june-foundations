@@ -21,15 +21,23 @@
     
     <section>
         <label>
-            <input id="first-add-input"> +
+            <input id="gen-input1"> <span>math symbols</span>
         </label>
-            <input id="second-add-input">
+            <input id="gen-input2">
         </label>
-        <button id="add-button">add</button> =
-        <span id="sum-display">Sum</span>
+        <!-- drop down list -->
+        <select name="math-names" id="math-drop-names">
+            <option value="add">add</option>
+            <option value="subtract">subtract</option>
+            <option value="multiply">multiply</option>
+            <option value="divide">divide</option>
+            <option value="modulo">modulo</option>
+        </select>
+        <button id="submit-btn">submit</button> =
+        <span id="results-display">results</span>
     </section>
 
-    <section>
+    <!-- <section>
         <label>
             <input id="first-subtract-input"> -
         </label>
@@ -67,7 +75,7 @@
         </label>
         <button id="modulo-button">modulo</button> =
         <span id="remainder-display">Remainder</span>
-    </section>
+    </section> -->
 
     </main>
 
