@@ -1,10 +1,6 @@
 // import functions
 // import our add function
-import { add } from './calculations.js';
-import { subtract } from './calculations.js';
-import { multiply } from './calculations.js';
-import { divide } from './calculations.js';
-import { modulo } from './calculations.js';
+import { add, subtract, multiply, divide, modulo } from './calculations.js';
 
 // reference needed DOM elements
 // #first-add-input, #second-add-input, #add-button, #sum-display
@@ -22,14 +18,37 @@ const resultsDisplay = document.getElementById('results-display');
 
   // add event listener to button click
 submitBtn.addEventListener('click', () => {
-    if (dropNames.value === 'add'){
+    if (dropNames.value === 'add') {
         const addend1 = Number(genInput1.value);
         const addend2 = Number(genInput2.value);
         const answer = add(addend1, addend2);
         mathSymbol.textContent = '+';
         resultsDisplay.textContent = answer;
+    } else if (dropNames.value === 'subtract') {
+        const subtrahend1 = Number(genInput1.value);
+        const subtrahend2 = Number(genInput2.value);
+        const answer = subtract(subtrahend1, subtrahend2);
+        mathSymbol.textContent = '-';
+        resultsDisplay.textContent = answer;
+    } else if (dropNames.value === 'multiply') {
+        const factor1 = Number(genInput1.value);
+        const factor2 = Number(genInput2.value);
+        const answer = multiply(factor1, factor2);
+        mathSymbol.textContent = '*';
+        resultsDisplay.textContent = answer;
+    } else if (dropNames.value === 'divide') {
+        const divisor1 = Number(genInput1.value);
+        const divisor2 = Number(genInput2.value);
+        const answer = divide(divisor1, divisor2);
+        mathSymbol.textContent = '/';
+        resultsDisplay.textContent = answer;
+    } else if (dropNames.value === 'modulo') {
+        const operand1 = Number(genInput1.value);
+        const operand2 = Number(genInput2.value);
+        const answer = modulo(operand1, operand2);
+        mathSymbol.textContent = '%';
+        resultsDisplay.textContent = answer;
     }
-
 });
 
 
