@@ -11,6 +11,8 @@ import { modulo } from './calculations.js';
 const genInput1 = document.getElementById('gen-input1');
 const genInput2 = document.getElementById('gen-input2');
 const submitBtn = document.getElementById('submit-btn');
+const mathSymbol = document.getElementById('math-symbol');
+const dropNames = document.getElementById('math-drop-names');
 const resultsDisplay = document.getElementById('results-display');
 
 // set event listeners 
@@ -20,17 +22,35 @@ const resultsDisplay = document.getElementById('results-display');
 
   // add event listener to button click
 submitBtn.addEventListener('click', () => {
-    console.log(genInput1.value);
-// get the value #first-add-input -- convert to number
-    const addend1 = Number(genInput1.value);
-// get the value #second-add-input -- convert to number
-    const addend2 = Number(genInput2.value);
-// call add function with firstAddInput & secondAddInput
-    const answer = add(addend1, addend2);
-// replace the innertext of #sum-display with the result
-    console.log(answer);
-    resultsDisplay.textContent = answer;
+    if (dropNames.value === 'add'){
+        const addend1 = Number(genInput1.value);
+        const addend2 = Number(genInput2.value);
+        const answer = add(addend1, addend2);
+        mathSymbol.textContent = '+';
+        resultsDisplay.textContent = answer;
+    }
+
 });
+
+
+
+
+
+
+
+
+
+//     console.log(genInput1.value);
+// // get the value #first-add-input -- convert to number
+   
+// // get the value #second-add-input -- convert to number
+   
+// // call add function with firstAddInput & secondAddInput
+    
+// // replace the innertext of #sum-display with the result
+//     console.log(answer);
+//     resultsDisplay.textContent = answer;
+
 
 // const firstSubtractInput = document.getElementById('first-subtract-input');
 // const secondSubtractInput = document.getElementById('second-subtract-input');
